@@ -20,11 +20,11 @@ for(let index in books) {
 }
 
 //livre le plus emprunté 
-let moreReadBook = "";
+let moreReadBook = " ";
 let rentedscore = 0
 console.log("Le livre le plus emprunté est : ");
 books.forEach(book => {
-  if (book.renter > rentedscore) {
+  if (book.rented > rentedscore) {
     rentedscore = book.rented; 
     moreReadBook = book.title;
   }
