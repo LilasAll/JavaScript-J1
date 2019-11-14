@@ -51,3 +51,5 @@ console.log(Math.min.apply(Math, books.map(function(o) { return o.rented; })))
 //Trouve le livre avec l'ID: 873495
 let findBook = books.find(item => item.id == 873495);
 console.log("le livre avec l'id 873495 est :" + findBook.title)
+
+//Trier par ordre alphabétique :
