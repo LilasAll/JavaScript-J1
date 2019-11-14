@@ -21,7 +21,7 @@ for(let index in books) {
 
 //livre le plus emprunté 
 let moreReadBook = " ";
-let rentedscore = 0
+let rentedscore = 0;
 console.log("Le livre le plus emprunté est : ");
 books.forEach(book => {
   if (book.rented > rentedscore) {
@@ -30,3 +30,24 @@ books.forEach(book => {
   }
 });
 console.log(moreReadBook);
+console.log("Nombre de fois : ")
+console.log(Math.max.apply(Math, books.map(function(o) { return o.rented; })))
+
+//livre le moins emprunté
+let lessReadBook = " ";
+let renteScore2 = 0;
+console.log("Le livre le moins emprunté est :");
+
+/* function findMinValue(rentedtimes) {
+  return rentedtimes ==Math.min.apply(Math, books.map(function(o) { return o.rented; }))
+function myFunction() {
+  return document.getElementById("books").innerHTML = books.findIndex(findMinValue)
+}*/
+
+
+console.log("Nombre de fois :")
+console.log(Math.min.apply(Math, books.map(function(o) { return o.rented; })))
+
+//Trouve le livre avec l'ID: 873495
+let findBook = books.find(item => item.id == 873495);
+console.log("le livre avec l'id 873495 est :" + findBook.title)
