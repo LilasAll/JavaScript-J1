@@ -19,3 +19,14 @@ for(let index in books) {
     (books[index]['rented']>1) ? console.log('Tous les livres ont été empruntés une fois ou plus'):console.log('Au moins 1 livre n a jamais été emprunté');
 }
 
+//livre le plus emprunté 
+let moreReadBook = "";
+let rentedscore = 0
+console.log("Le livre le plus emprunté est : ");
+books.forEach(book => {
+  if (book.renter > rentedscore) {
+    rentedscore = book.rented; 
+    moreReadBook = book.title;
+  }
+});
+console.log(moreReadBook);
